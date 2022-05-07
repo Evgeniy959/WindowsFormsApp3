@@ -23,7 +23,7 @@ namespace WindowsFormsApp3
         {
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "JPG|*.jpg|PNG|*.pmg|BMP|*.bmp";
+            fileDialog.Filter = "JPG|*.jpg|PNG|*.png|BMP|*.bmp";
             if (fileDialog.ShowDialog()==DialogResult.OK)
             {
                 bitmap = new Bitmap(fileDialog.FileName);
@@ -35,7 +35,6 @@ namespace WindowsFormsApp3
         {
             Filter();
         }
-
 
         void Filter()
         {
@@ -67,9 +66,7 @@ namespace WindowsFormsApp3
 
                 Filter();
             }));
-
-            task.Start();
-            
+            task.Start();            
         }
     }
 }
